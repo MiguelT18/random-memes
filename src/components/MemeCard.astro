@@ -1,0 +1,34 @@
+---
+import Meme from '../mocks/Meme.json'
+import RightArrowIcon from '../icons/RightArrow.astro'
+import LeftArrowIcon from '../icons/LeftArrow.astro'
+---
+
+<article class='bg-slate-800 rounded-md p-5 w-fit mx-auto'>
+	<div class='flex items-center gap-3'>
+		<img
+			src='https://randomuser.me/api/portraits/lego/6.jpg'
+			alt='User profile'
+			class='w-12 h-12 rounded-full'
+		/>
+		<p class='text-sm font-bold'>
+			@{Meme.author}
+			<br />
+			<span class='text-sm font-normal text-gray-400'>seguidres {Meme.ups}</span
+			>
+		</p>
+	</div>
+	<div>
+		<p class='text-sm mt-5'>
+			{Meme.title}.
+		</p>
+		<img src={Meme.url} alt='Random Meme' class='max-w-[520px] mt-3' />
+		<hr class='mt-5' />
+	</div>
+	<form class='flex justify-around mt-5'>
+		<button><LeftArrowIcon /></button>
+		<button><RightArrowIcon /></button>
+	</form>
+</article>
+
+<style></style>

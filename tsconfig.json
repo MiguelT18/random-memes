@@ -1,3 +1,16 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": "/home/miguel/proyectosPersonales/WEB_APPS/random-memes",
+    "paths": {
+      "@components/": [
+        "src/components/*"
+      ],
+      "@icons/": [
+        "src/icons/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }
